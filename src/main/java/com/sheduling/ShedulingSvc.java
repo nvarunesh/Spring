@@ -46,7 +46,7 @@ public class ShedulingSvc {
 		System.err.println("Arun--fixedDelay--" + LocalDateTime.now().toString());
 	}
 
-	@Schedules({ @Scheduled(fixedRate = 10000), @Scheduled(cron = "0 * * * * MON-FRI") })
+	@Schedules({ @Scheduled(fixedRate = 10000), @Scheduled(cron = "0 * * * * MON-THU") })
 	public void checkVehicle() {
 		try {
 			Thread.currentThread().sleep(1000);

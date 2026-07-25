@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.scheduling.annotation.Schedules;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -39,9 +40,18 @@ public class ShedulingSvc {
 	@Scheduled(fixedDelay = 5000)
 	public void fixedDelay() {
 		try {
-			Thread.currentThread().sleep(10000);
+			Thread.currentThread().sleep(1000);
 		} catch (InterruptedException e) {
 		}
-		System.out.println("Arun--fixedDelay--" + LocalDateTime.now().toString());
+		System.err.println("Arun--fixedDelay--" + LocalDateTime.now().toString());
+	}
+
+	@Schedules({ @Scheduled(fixedRate = 10000), @Scheduled(cron = "0 * * * * MON-FRI") })
+	public void checkVehicle() {
+		try {
+			Thread.currentThread().sleep(1000);
+		} catch (InterruptedException e) {
+		}
+		System.err.println("Arun--fixedDelay--" + LocalDateTime.now().toString());
 	}
 }

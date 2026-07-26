@@ -21,7 +21,6 @@ public class CacheSvc {
 	// 3) Remove one item from cache
 	@CacheEvict(value = "products", key = "#id")
 	public void deleteProduct(Long id) {
-		return;
 	}
 
 }

@@ -54,4 +54,9 @@ public class ShedulingSvc {
 		}
 		System.err.println("Arun--fixedDelay--" + LocalDateTime.now().toString());
 	}
+	
+    @Scheduled(cron = "0 * * * * *")
+    public void runEveryMinute() {
+        System.out.println("Task executed every minute");
+    }
 }

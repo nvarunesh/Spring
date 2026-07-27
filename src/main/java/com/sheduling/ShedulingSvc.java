@@ -14,7 +14,7 @@ public class ShedulingSvc {
 	 * This method start every millisecond mentioned in the parameter and it will
 	 * use single thread
 	 */
-	@Scheduled(fixedRate = 5000)
+	@Scheduled(fixedRate = 500000)
 	public void fixedRate() {
 		System.err.println("Arun--fixedRate--" + LocalDateTime.now().toString());
 		try {
@@ -28,7 +28,7 @@ public class ShedulingSvc {
 	 * the @Async this enable the multiple thread
 	 */
 	@Async
-	@Scheduled(fixedRate = 5000)
+	@Scheduled(fixedRate = 500000)
 	public void fixedRateWithAynsc() {
 		System.err.println("Arun--fixedRate--" + LocalDateTime.now().toString());
 		try {
@@ -37,7 +37,7 @@ public class ShedulingSvc {
 		}
 	}
 
-	@Scheduled(fixedDelay = 5000)
+	@Scheduled(fixedDelay = 50000)
 	public void fixedDelay() {
 		try {
 			Thread.currentThread().sleep(1000);
@@ -46,7 +46,7 @@ public class ShedulingSvc {
 		System.err.println("Arun--fixedDelay--" + LocalDateTime.now().toString());
 	}
 
-	@Schedules({ @Scheduled(fixedRate = 10000), @Scheduled(cron = "0 * * * * MON-THU") })
+	@Schedules({ @Scheduled(fixedRate = 10000000), @Scheduled(cron = "0 * * * * MON-THU") })
 	public void checkVehicle() {
 		try {
 			Thread.currentThread().sleep(1000);

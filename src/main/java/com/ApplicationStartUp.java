@@ -10,10 +10,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EnableCaching
 @EnableAsync
-public class LoginApplication {
+public class ApplicationStartUp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LoginApplication.class, args);
+		SpringApplication.run(ApplicationStartUp.class, args);
+		System.err.println("Started");
 	}
 
 }

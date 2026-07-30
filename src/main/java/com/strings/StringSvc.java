@@ -205,22 +205,6 @@ public class StringSvc {
 		return result;
 	}
 
-//	Reverse a String: Without using StringBuilder.reverse()
-//	.Palindrome Check: Determine if a string reads the same forwards and backwards.
-//	Count Vowels & Consonants: Count the number of vowels and consonants in a given string.
-//	Character Frequency: Find how many times each character appears in a string.
-//	First Non-Repeating Character: Find the first character that does not repeat.
-//	Remove Character: Remove all occurrences of a specific character.
-//	String Length without length(): Calculate the length of a string using a loop.
-//	Find Whitespace: Count or remove all spaces in a string.
-//	String to Integer: Convert a numeric string into an integer (e.g., Integer.parseInt()).
-//	Anagram Check: Determine if two strings contain the same characters in a different order.
-//	Check for Rotation: Verify if one string is a rotation of another (e.g., "ABCD" and "CDAB").
-//	Substring Check: Check if a string contains a specific substring without using contains().
-//	Toggle Case: Convert all lowercase letters to uppercase and vice versa.
-//	Remove Duplicate Characters: Return a string with only unique characters.
-//	Check if String is Digits-only: Use Regex or a loop to check if the string contains only numbers.
-
 	public static String a1(String a) {
 		StringBuilder result = new StringBuilder();
 		char arr[] = a.toCharArray();

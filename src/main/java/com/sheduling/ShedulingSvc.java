@@ -1,7 +1,5 @@
 package com.sheduling;
 
-import java.time.LocalDateTime;
-
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.scheduling.annotation.Schedules;
@@ -16,7 +14,6 @@ public class ShedulingSvc {
 	 */
 	@Scheduled(fixedRate = 500000)
 	public void fixedRate() {
-		System.err.println("Arun--fixedRate--" + LocalDateTime.now().toString());
 		try {
 			Thread.currentThread().sleep(10000);
 		} catch (InterruptedException e) {
@@ -30,7 +27,6 @@ public class ShedulingSvc {
 	@Async
 	@Scheduled(fixedRate = 500000)
 	public void fixedRateWithAynsc() {
-		System.err.println("Arun--fixedRate--" + LocalDateTime.now().toString());
 		try {
 			Thread.currentThread().sleep(10000);
 		} catch (InterruptedException e) {
@@ -43,7 +39,6 @@ public class ShedulingSvc {
 			Thread.currentThread().sleep(1000);
 		} catch (InterruptedException e) {
 		}
-		System.err.println("Arun--fixedDelay--" + LocalDateTime.now().toString());
 	}
 
 	@Schedules({ @Scheduled(fixedRate = 10000000), @Scheduled(cron = "0 * * * * MON-THU") })
@@ -52,11 +47,10 @@ public class ShedulingSvc {
 			Thread.currentThread().sleep(1000);
 		} catch (InterruptedException e) {
 		}
-		System.err.println("Arun--fixedDelay--" + LocalDateTime.now().toString());
 	}
-	
-    @Scheduled(cron = "0 * * * * *")
-    public void runEveryMinute() {
-        System.out.println("Task executed every minute");
-    }
+
+	@Scheduled(cron = "0 * * * * *")
+	public void runEveryMinute() {
+		System.out.println("Task executed every minute");
+	}
 }

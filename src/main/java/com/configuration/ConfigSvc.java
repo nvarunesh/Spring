@@ -1,6 +1,5 @@
 package com.configuration;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class ConfigSvc {
 	
-	@Value("${app.name}")
+
 	public String name;
 
 	@PostMapping("/name")

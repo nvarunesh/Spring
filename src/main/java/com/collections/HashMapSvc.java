@@ -20,7 +20,7 @@ public class HashMapSvc {
 		obj.keySet();
 		obj.entrySet();
 		System.out.println(obj.containsKey(""));
-		String abc = "i love springboot";
+		String abc = "i love java";
 		Map<Character, Long> d = abc.chars().mapToObj(c -> (char) c)
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 	}

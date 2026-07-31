@@ -23,7 +23,6 @@ public class HashMapSvc {
 		String abc = "i love springboot";
 		Map<Character, Long> d = abc.chars().mapToObj(c -> (char) c)
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-		System.out.println(d);
 	}
 
 }
